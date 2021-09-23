@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+void contarIter(int);
+void contarRec(int);
+
+int main(void)
+{
+    int n;
+
+    cout << "ingrese un numero entero ";
+    cin >> n;
+
+    contarIter(n);
+
+    contarRec(n);
+
+    cout << endl;
+    return 0;
+}
+
+void contarRec(int n)
+{
+    if(n >= 1){
+        cout << n << endl;
+        n = n - 1;
+        contarRec(n);
+    }
+}
+
+void contarIter(int n)
+  { int i;
+    i = 1;
+    while(i < n){
+        cout << i << endl;
+        i = i + 1;  }
+}
