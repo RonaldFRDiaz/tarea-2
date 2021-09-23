@@ -1,0 +1,34 @@
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+
+using namespace std;
+
+int main(){
+    int mayor, menor, resultado, prome;
+
+    
+    cout<<"\ningrese un numero mayor: "<<endl;
+    cin>>mayor;
+
+    cout<<"\ningrese un numero menor: "<<endl;
+    cin>>menor;
+    
+    do{
+       prome= mayor/menor;
+
+       if(prome != 0){ 
+       mayor= menor;
+       menor = prome;
+       }else 
+       { resultado = menor;};
+
+    }while(prome != 0);
+
+    
+    cout<<"la variable mcd se encuentra en el numero: "<<resultado<<endl;
+
+    return 0;
+    
+}
